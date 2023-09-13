@@ -1,9 +1,10 @@
 import './App.css';
+import Homepage from './components/Homepage';
+import Login from './components/Login';
+import Register from './components/Register';
+import Profile from './components/Profile';
+import state from './components/State';
 import { Routes, Route } from 'react-router-dom';
-import Homepage from '../../components/Homepage';
-import Login from '../../components/Login';
-import Register from '../../components/Register';
-import Profile from '../../components/Profile';
 
 
 function App() {
@@ -11,9 +12,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<Homepage />} />
-        <Route path='/Login' element={<Homepage />} />
-        <Route path='/Register' element={<Homepage />} />
-        <Route path='/Profile' element={<Homepage />} />
+        <Route path='/Login' element={<Login />} />
+        <Route path='/Register' element={<Register />} />
+        <Route path='/Profile' element={<Profile />} />
+        <Route path='/State' element={<State />} />
       </Routes>
     </div>
   );
