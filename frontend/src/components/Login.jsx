@@ -1,8 +1,11 @@
-// const Register = () => {}    or 
 import { useNavigate } from "react-router-dom";
 
 function Login () {
     const router = useNavigate();
+
+    function routerToHomepage() {
+        router('/')
+    }
  
     return (
         <div>
@@ -12,4 +15,4 @@ function Login () {
     )
 }
 
-export default Login;
+export default Login

@@ -1,4 +1,4 @@
-// const Register = () => {}    or
+import React from "react";
 
 function Profile () {
     return (

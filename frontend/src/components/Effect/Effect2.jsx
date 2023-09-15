@@ -10,10 +10,10 @@ const Effect2 = () => {
 
     return (
         <div>
-            <h1>Counter - {counter}</h1>
-            <button onClick={() => setCounter((preValue) => preValue + 1)}>+</button>
+            <h1>Counter</h1>
+            <button onClick={() => setCounter((prevValue) => prevValue + 1)}>+</button>
         </div>
     )
 }
 
-export default Effect2;
+export default Effect2

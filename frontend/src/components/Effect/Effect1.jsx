@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
 const Effect1 = () => {
-    consrt[Counter, setCounter] = useState(0)
+
+    const [Counter, setCounter] = useState(0)
 
     useEffect(() => {
         alert("Rendered..it'll execute the function on every render and render causes bcoz of first render, reload and state change")
@@ -9,10 +10,10 @@ const Effect1 = () => {
 
     return (
         <div>
-            <h1>Counter - {counter}</h1>
-            <button onClick={() => setCounter((preValue) => preValue + 1)}>+</button>
+            <h1>Counter</h1>
+            <button onClick={() => setCounter((prevValue) => prevValue + 1)}>+</button>
         </div>
     )
 }
 
-export default Effect1;
+export default Effect1

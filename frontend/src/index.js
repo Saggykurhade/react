@@ -10,7 +10,6 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <App />
-    {/* if we use function inside self closing brackets it behaves like component */}
     </BrowserRouter>
   </React.StrictMode>
 );
