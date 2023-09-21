@@ -1,0 +1,13 @@
+.Active-Button {
+    background-color: orange;
+    width: 80px;
+    color: white;
+    cursor: pointer;
+}
+
+.Inactive-Button {
+    background-color: purple;
+    width: 80px;
+    color: white;
+    cursor: pointer;
+}

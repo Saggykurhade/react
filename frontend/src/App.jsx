@@ -14,6 +14,7 @@ import Mapping from './components/Map,Ternary,Styled/Mapping';
 import Ternary from './components/Map,Ternary,Styled/Ternary';
 import StyledComponents from './components/Map,Ternary,Styled/StyledComponents';
 import CounterSe from './components/Map,Ternary,Styled/CounterSe';
+import DynamicStyles from './components/Dynamic/DynamicStyles';
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -38,6 +39,7 @@ function App() {
         <Route exact path='/ternary' element={<Ternary loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn} />} />
         <Route exact path='/styledComponents' element={<StyledComponents />} />
         <Route exact path='/counterSe' element={<CounterSe />} />
+        <Route exact path='/DynamicStyles' element={<DynamicStyles />} />
       </Routes>
     </div>
   );
