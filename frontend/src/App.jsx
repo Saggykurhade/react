@@ -15,8 +15,10 @@ import Ternary from './components/Map,Ternary,Styled/Ternary';
 import StyledComponents from './components/Map,Ternary,Styled/StyledComponents';
 import CounterSe from './components/Map,Ternary,Styled/CounterSe';
 import DynamicStyles from './components/Dynamic/DynamicStyles';
+import ChildrenProp from './components/FormFill/ChildrenProp';
+import Form from './components/FormFill/Form';
 import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { Children, useState } from 'react';
 
 
 function App() {
@@ -39,7 +41,9 @@ function App() {
         <Route exact path='/ternary' element={<Ternary loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn} />} />
         <Route exact path='/styledComponents' element={<StyledComponents />} />
         <Route exact path='/counterSe' element={<CounterSe />} />
-        <Route exact path='/DynamicStyles' element={<DynamicStyles />} />
+        <Route exact path='/dynamicstyles' element={<DynamicStyles />} />
+        <Route exact path='/childrenprop' element={<ChildrenProp />} />
+        <Route exact path='/form' element={<Form />} />
       </Routes>
     </div>
   );
