@@ -1,15 +1,36 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
     const [userData, setUserData] = useState({ name: "", email: "", password: "" });
+    const router = useNavigate();
     // console.log(userData,"userData")
 
     const handleChange = (event) => {
-        console.log(event.target.value, "value", event.target.value, "name")
+        // console.log(event.target.value, "value", event.target.value, "name")
+        setUserData({ ...userData, [event.target.name]: event.target.value })
     }
 
-    const sendDataToBackend = () => {
-        alert("Data Submitted to Backend...")
+    const sendDataToBackend = async (event) => {
+        event.preventDefault();
+        // alert("Data Submitted to Backend...")
+        if (userData.name && userData.email && userData.password) {
+            if (userData.password.length >= 8) {
+                // const response = await axios.post("http://localhost:8000/register", { userData });
+                const response = { data: { success: true } };
+                if (response.data.success) {
+                    alert("Registeration successfull.")
+                    setUserData({ name: "", email: "", password: "" })
+                    router("/")
+                } else {
+                    alert(response.data.error)
+                }
+            } else {
+                alert("Password must be 8 digit.")
+            }
+        } else {
+            alert("Please fill the all values..")
+        }
     }
 
     return (
@@ -22,7 +43,7 @@ const Form = () => {
                 <input name='email' type='email' onChange={handleChange} /> <br />
                 <label>Password :</label><br />
                 <input name='password' type='password' onChange={handleChange} /> <br />
-                <input type='submit' /> <br />
+                <input type='submit' value="Register here" /> <br />
             </form>
         </div>
     )
