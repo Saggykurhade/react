@@ -18,7 +18,8 @@ import DynamicStyles from './components/Dynamic/DynamicStyles';
 import ChildrenProp from './components/FormFill/ChildrenProp';
 import Form from './components/FormFill/Form';
 import { ClassComponent } from './components/Class/ClassComponent';
-import PageNotFound from './components/Class/PageNotFound';
+import PageFound from './components/Class/PageFound';
+import Products from './components/Product/Products'
 import { Routes, Route } from 'react-router-dom';
 import { Children, useState } from 'react';
 
@@ -28,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='*' element={<PageNotFound />} />
+        <Route path='*' element={<PageFound />} />
         <Route path='/' element={<Homepage />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/register' element={<Register />} />
@@ -48,6 +49,7 @@ function App() {
         <Route exact path='/childrenprop' element={<ChildrenProp />} />
         <Route exact path='/form' element={<Form />} />
         <Route exact path='/class-component' element={<ClassComponent />} />
+        <Route exact path='/Products' element={<Products />} />
       </Routes>
     </div>
   );

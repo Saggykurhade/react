@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import toast from 'react-hot-toast';
 
 function Homepage () {
 
@@ -16,6 +17,10 @@ function Homepage () {
     function routerToCounter() {
         router('/CoUnter');
     }
+
+    function PageFound() {
+        router('/PageFound');
+    }
     
     return (
         <div>
@@ -23,6 +28,8 @@ function Homepage () {
             <button onClick={routerToLogin}>Go to Login</button>
             <button onClick={routerToRegister}>Go to Register</button>
             <button onClick={routerToCounter}>Go to Counter</button>
+            <button onClick={() => toast.error("Clickedd")}>Click for toast error</button>
+            <button onClick={() => toast.success("Clickedd")}>Click for toast success</button>
         </div>
     )
 }
