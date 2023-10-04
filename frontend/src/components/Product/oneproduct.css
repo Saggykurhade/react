@@ -10,12 +10,20 @@
 }
 
 .border img {
-    width: 70%;
+    width: 60%;
     height: 60%;
 }
 
 .border {
     border: 1px solid black;
     width: 45%;
-    height: 600px;
+    height: 300px;
+}
+
+.border h1 {
+    font-size: 15px;
+}
+
+.border h4 {
+    font-size: 10px;
 }
