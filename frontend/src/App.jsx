@@ -19,7 +19,8 @@ import ChildrenProp from './components/FormFill/ChildrenProp';
 import Form from './components/FormFill/Form';
 import { ClassComponent } from './components/Class/ClassComponent';
 import PageFound from './components/Class/PageFound';
-import Products from './components/Product/Products'
+import Products from './components/Product/Products';
+import OneProduct from './components/Product/OneProduct';
 import { Routes, Route } from 'react-router-dom';
 import { Children, useState } from 'react';
 
@@ -50,6 +51,7 @@ function App() {
         <Route exact path='/form' element={<Form />} />
         <Route exact path='/class-component' element={<ClassComponent />} />
         <Route exact path='/Products' element={<Products />} />
+        <Route exact path='/OneProduct/:id' element={<OneProduct />} />
       </Routes>
     </div>
   );

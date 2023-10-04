@@ -1,9 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
+import { Router, useNavigate } from 'react-router-dom';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
+    console.log(products);
+    const router = useNavigate();
 
     useEffect(() => {
         // toast.success("Page rendered on browser..")
@@ -21,7 +24,7 @@ const Products = () => {
     return (
         <div>{products?.length ? <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around" }}>
             {products.map((pro) => (
-                <div style={{ border: "1px solid black", width: "23%", height: "380px", marginBottom: "10px" }}>
+                <div onClick={() => router(`/OneProduct/${pro.id}`)} style={{ border: "1px solid black", width: "23%", height: "380px", marginBottom: "10px" }}>
                     <img style={{ width: "80%", height: "160px" }} src={pro.image} />
                     <h6>Name :{pro.title}</h6>
                     <h6>Price : {pro.price} $</h6>
