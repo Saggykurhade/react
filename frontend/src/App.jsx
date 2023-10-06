@@ -24,6 +24,7 @@ import PageFound from './components/Class/PageFound';
 import Products from './components/Product/Products';
 import OneProduct from './components/Product/OneProduct';
 import AddProduct from './components/Product/AddProduct';
+import UseMemo from './components/Memo/UseMemo';
 
 
 function App() {
@@ -53,7 +54,8 @@ function App() {
         <Route exact path='/class-component' element={<ClassComponent />} />
         <Route exact path='/Products' element={<Products />} />
         <Route exact path='/OneProduct/:id' element={<OneProduct />} />
-        <Route exact path='/AddProduct' element={<AddProduct />} /> 
+        <Route exact path='/AddProduct' element={<AddProduct />} />
+        <Route exact path='/UseMemo' element={<UseMemo />} />
       </Routes>
     </div>
   );
