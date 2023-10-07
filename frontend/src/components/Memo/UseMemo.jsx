@@ -9,6 +9,8 @@ const UseMemo = () => {
         setTodos([...todos, "New todo"])
     }
 
+    // const lengthyCalculation = calculate(counter);
+
     const lengthyCalculation = useMemo(() => calculate(counter), [counter]);
 
     return (

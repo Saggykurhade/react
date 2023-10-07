@@ -25,6 +25,7 @@ import Products from './components/Product/Products';
 import OneProduct from './components/Product/OneProduct';
 import AddProduct from './components/Product/AddProduct';
 import UseMemo from './components/Memo/UseMemo';
+import UseCallback from './components/Memo/UseCallback';
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
         <Route exact path='/OneProduct/:id' element={<OneProduct />} />
         <Route exact path='/AddProduct' element={<AddProduct />} />
         <Route exact path='/UseMemo' element={<UseMemo />} />
+        <Route exact path='/UseCallback' element={<UseCallback />} />
       </Routes>
     </div>
   );
