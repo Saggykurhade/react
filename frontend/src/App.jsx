@@ -26,6 +26,9 @@ import OneProduct from './components/Product/OneProduct';
 import AddProduct from './components/Product/AddProduct';
 import UseMemo from './components/Memo/UseMemo';
 import UseCallback from './components/Memo/UseCallback';
+import UseReducer from './components/Reducer/UseReducer';
+import TestReducer from './components/Reducer/TestReducer';
+import GlobalContext from './components/Context/GlobalContext';
 
 
 function App() {
@@ -58,6 +61,9 @@ function App() {
         <Route exact path='/AddProduct' element={<AddProduct />} />
         <Route exact path='/UseMemo' element={<UseMemo />} />
         <Route exact path='/UseCallback' element={<UseCallback />} />
+        <Route exact path='/UseReducer' element={<UseReducer />} />
+        <Route exact path='/TestReducer' element={<TestReducer />} />
+        <Route exact path='/GlobalContext' element={<GlobalContext />} />
       </Routes>
     </div>
   );
