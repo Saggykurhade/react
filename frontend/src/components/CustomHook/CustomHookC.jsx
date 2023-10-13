@@ -1,9 +1,17 @@
 import React from 'react'
+import useCounter from './CustomHookC';
 
-const CustomHookC = () => {
-  return (
-    <div>CustomHookC</div>
-  )
+const CustomHook = () => {
+    const [counter, Increment, Decrement, Reset] = useCounter();
+
+    return (
+        <div>
+            <h1>Counter : {counter}</h1>
+            <button onClick={Increment}>+</button>
+            <button onClick={Decrement}>-</button>
+            <button onClick={Reset}>Reset</button>
+        </div>
+    )
 }
 
-export default CustomHookC
+export default CustomHook
