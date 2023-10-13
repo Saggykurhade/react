@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-const initialValue = { count: 0 }
+const initialState = { count: 0 }
 const reducer = (state, action) => {
     switch (action.type) {
         case "ADD":
@@ -14,7 +14,7 @@ const reducer = (state, action) => {
 }
 
 const UseReducer2 = () => {
-    const [state, dispatch] = useReducer(reducer, initialValue);
+    const [state, dispatch] = useReducer(reducer, initialState);
 
     function AddCounter () {
         dispatch({type : "ADD"})
