@@ -1,10 +1,14 @@
 import React from 'react';
-import useLocalStorage from './CustomHookLS';
+import useLocalStorage from './UseLocalStorage';
+
 function CustomHookLS() {
+    
     const [name, setName] = useLocalStorage('name', '');
+    
     const handleChange = (event) => {
         setName(event.target.value);
     };
+
     return (
         <div>
             <input type="text" value={name} onChange={handleChange} />

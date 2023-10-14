@@ -1,7 +1,7 @@
 import React from 'react'
-import useCounter from './CustomHookC';
+import useCounter from './UseCounter';
 
-const CustomHook = () => {
+const CustomHookC = () => {
     const [counter, Increment, Decrement, Reset] = useCounter();
 
     return (
@@ -14,4 +14,4 @@ const CustomHook = () => {
     )
 }
 
-export default CustomHook
+export default CustomHookC
