@@ -19,7 +19,7 @@ function Homepage () {
 
     
     function routerToCounter() {
-        router('/CoUnter');
+        router('/Counter');
     }
 
     function PageFound() {
