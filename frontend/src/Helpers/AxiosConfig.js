@@ -5,6 +5,6 @@ if (process.env.MODE == "PRODUCTION") {
     BackendUrl = "https://awdiz.com/api/v1"
 }
 
-const api = axios.create({ baseURL: BackendUrl });
+const api = axios.create({ baseURL: BackendUrl })
 
 export default api
