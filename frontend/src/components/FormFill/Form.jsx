@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import api from "../../Helpers/AxiosConfig";
 
 const Form = () => {
     const [userData, setUserData] = useState({ name: "", email: "", password: "" });
@@ -27,10 +28,10 @@ const Form = () => {
                 // } else {
                 //     alert(response.data.error)
                 try {
-                    const response = await axios.post("http://localhost:8000/register", { userData });
+                    const response = await api.post("/auth/register", { userData });
                     // const response = { data: { success: true } };
                     if (response.data.success) {
-                      alert("Registeration successfull.")
+                      toast.success("Registeration successfull.")
                       setUserData({ name: "", email: "", password: "" })
                       router("/")
                     } else {
