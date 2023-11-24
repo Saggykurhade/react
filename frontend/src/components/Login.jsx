@@ -27,14 +27,14 @@ function Login() {
                         localStorage.setItem("my-token", JSON.stringify(response.data.token))
                         Login(response.data.user);
                         console.log(response.data, "response data")
-                        toast.success("Login successfull.")
+                        toast.success("Login successfull...")
                         setUserData({ email: "", password: "" })
                         router("/")
                     } else {
                         throw new Error("Something went wrong..")
                     }
                 } catch (error) {
-                    toast.error(error?.message)
+                    toast.error(error?.response.data.message)
                     console.log(error, "error here")
                 }
             } else {

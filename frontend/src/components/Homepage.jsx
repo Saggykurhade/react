@@ -7,13 +7,13 @@ import { AuthContext } from "./Context/AuthContext";
 function Homepage() {
 
     // const {state, dispatch} = useContext(MyContext);
-    const { state } = useContext(AuthContext)
+    const { state, Logout } = useContext(AuthContext)
     console.log(state, "state")
 
     const router = useNavigate()
 
     function routerToLogin() {
-        router('/Login');
+        router('/login');
     }
 
     function routerToRegister() {
@@ -39,7 +39,9 @@ function Homepage() {
             <button onClick={routerToRegister}>Go to Register</button>
             {/* <button onClick={routerToCounter}>Go to Counter</button> */}
             <button onClick={() => toast.error("Clickedd")}>Click for toast error</button>
-            <button onClick={() => toast.success("Clickedd")}>Click for toast success</button>
+            {/* <button onClick={() => toast.success("Clickedd")}>Click for toast success</button> */}
+            <button onClick={() => toast.success("Clickedd")}>Click for toast success</button><br />
+            <button onClick={Logout}>Logout ?</button>
         </div>
     )
 }
