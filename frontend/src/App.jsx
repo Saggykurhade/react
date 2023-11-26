@@ -33,6 +33,7 @@ import UseReducer1 from './components/Reducer/UseReducer1';
 import UseReducer2 from './components/Reducer/UseReducer2';
 import CustomHookC from './components/CustomHook/CustomHookC';
 import CustomHookLS from './components/CustomHook/CustomHookLS';
+import UseReducer3 from './components/Reducer/UseReducer3';
 
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
         <Route exact path='/GlobalContext' element={<GlobalContext />} />
         <Route exact path='/UseReducer1' element={<UseReducer1 />} />
         <Route exact path='/UseReducer2' element={<UseReducer2 />} />
+        <Route exact path='/UseReducer3' element={<UseReducer3 />} />
         <Route exact path='/Customhookc' element={<CustomHookC />} />
         <Route exact path='/Customhookls' element={<CustomHookLS />} />
       </Routes>

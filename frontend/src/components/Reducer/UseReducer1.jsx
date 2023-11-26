@@ -1,21 +1,21 @@
 import React, { useReducer } from 'react';
- const initialState = { count: 0 }
+const initialState = { count: 0 }
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD":
       return { ...state, count: state.count + 1 }
     case "SUBTRACT":
-      if(state.count > 0) {
+      if (state.count > 0) {
         return { ...state, count: state.count - 1 }
       }
-      case "MULTIPLY":
-        if(state.count) {
-          return {...state, count: state.count * 2}
-        }
-        case "DIVIDE":
-          if(state.count > 0) {
-            return {...state, count: state.count / 2}
-          }
+    case "MULTIPLY":
+      if (state.count) {
+        return { ...state, count: state.count * 2 }
+      }
+    case "DIVIDE":
+      if (state.count > 0) {
+        return { ...state, count: state.count / 2 }
+      }
     case "RESET":
       return { ...state, count: 0 }
     default:
@@ -36,7 +36,7 @@ const UseReducer1 = () => {
   function MultiplyCounter() {
     dispatch({ type: "MULTIPLY" })
   }
-  
+
   function DivideCounter() {
     dispatch({ type: "DIVIDE" })
   }

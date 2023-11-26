@@ -30,6 +30,7 @@ const UseReducer = () => {
     const reset = () => {
         dispatch({ type: "RESET" });
     }
+    
     return (
         <div>
             <h2>Count : {state.count}</h2>
