@@ -22,7 +22,7 @@ const GlobalContext = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     useEffect(() => {
-        alert("page is refreshed...")
+        // alert("page is refreshed...")
     }, [])
 
     return (
