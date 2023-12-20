@@ -1,5 +1,5 @@
 import './App.css';
-import { Children, useState } from 'react';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import Login from './components/Login';
@@ -34,6 +34,7 @@ import UseReducer2 from './components/Reducer/UseReducer2';
 import CustomHookC from './components/CustomHook/CustomHookC';
 import CustomHookLS from './components/CustomHook/CustomHookLS';
 import UseReducer3 from './components/Reducer/UseReducer3';
+import YourProducts from './components/YourProducts';
 
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
         <Route exact path='/UseReducer3' element={<UseReducer3 />} />
         <Route exact path='/Customhookc' element={<CustomHookC />} />
         <Route exact path='/Customhookls' element={<CustomHookLS />} />
+        <Route exact path='/YourProducts' element={<YourProducts />} />
       </Routes>
     </div>
   );

@@ -1,4 +1,4 @@
-import { createContext, useReducer } from 'react';
+import { createContext, useEffect, useReducer } from 'react';
 
 export const MyContext = createContext();
 
@@ -20,6 +20,10 @@ const GlobalContext = ({ children }) => {
     const initialState = { counter: 0 };
 
     const [state, dispatch] = useReducer(reducer, initialState);
+
+    useEffect(() => {
+        alert("page is refreshed...")
+    }, [])
 
     return (
         <div>
