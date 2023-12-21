@@ -21,10 +21,6 @@ const GlobalContext = ({ children }) => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
 
-    useEffect(() => {
-        // alert("page is refreshed...")
-    }, [])
-
     return (
         <div>
             <MyContext.Provider value={{ state, dispatch }}>
