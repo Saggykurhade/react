@@ -37,7 +37,6 @@ const AddProduct = () => {
         } else {
             toast.error("All fields are mandtory and price must be greater than 0.")
         }
-
     }
 
     useEffect(() => {

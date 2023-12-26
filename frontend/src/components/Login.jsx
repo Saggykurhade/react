@@ -29,7 +29,7 @@ function Login() {
                         console.log(response.data, "response data")
                         toast.success("Login successfull...")
                         setUserData({ email: "", password: "" })
-                        router("/homepage")
+                        router("/")
                     } else {
                         throw new Error("Something went wrong..")
                     }
