@@ -13,7 +13,7 @@ const YourProducts = () => {
 
   async function getYourProduct() {
     try {
-      const response = api.post('/product/YourProducts', { id: state?.user?.id })
+      const response = api.post('/product/Your-Products', { id: state?.user?.id })
       if (response.data.success) {
         setYourProducts(response.data.products)
       }

@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from 'axios';
+import React, { useState } from "react";
 import toast from 'react-hot-toast';
 import api from "../../Helpers/AxiosConfig";
 
@@ -31,13 +30,13 @@ const Form = () => {
                     const response = await api.post("/auth/register", { userData });
                     // const response = { data: { success: true } };
                     if (response.data.success) {
-                      toast.success("Registeration successfull.")
-                      setUserData({ name: "", email: "", password: "" })
-                      router("/login")
+                        toast.success("Registeration successfull.")
+                        setUserData({ name: "", email: "", password: "" })
+                        router("/login")
                     } else {
-                      throw new Error("Something went wrong..")
+                        throw new Error("Something went wrong..")
                     }
-                  } catch (error) {
+                } catch (error) {
                     toast.error(error?.message)
                     console.log(error, "error here")
                 }

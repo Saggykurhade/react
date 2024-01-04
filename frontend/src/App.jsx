@@ -36,6 +36,8 @@ import CustomHookLS from './components/CustomHook/CustomHookLS';
 import UseReducer3 from './components/Reducer/UseReducer3';
 import YourProducts from './components/YourProducts';
 import UpdateProduct from './components/UpdateProduct';
+import Navbar from './components/Common/Navbar';
+import Cart from './components/Cart';
 
 
 function App() {
@@ -76,8 +78,10 @@ function App() {
         <Route exact path='/UseReducer3' element={<UseReducer3 />} />
         <Route exact path='/Customhookc' element={<CustomHookC />} />
         <Route exact path='/Customhookls' element={<CustomHookLS />} />
-        <Route exact path='/YourProducts' element={<YourProducts />} />
+        <Route exact path='/YourProduct/:id' element={<YourProducts />} />
         <Route exact path='/UpdateProduct' element={<UpdateProduct />} />
+        <Route exact path='/Navbar' element={<Navbar />} />
+        <Route exact path='/Cart' element={<Cart />} />
       </Routes>
     </div>
   );

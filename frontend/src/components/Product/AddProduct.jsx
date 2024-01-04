@@ -1,4 +1,3 @@
-import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import api from '../../Helpers/AxiosConfig'
@@ -27,6 +26,7 @@ const AddProduct = () => {
                 const { data } = await api.post("/product/add-product", { name: productData.name, price: productData.price, image: productData.image, category: productData.category })
                 // console.log(data, "response from post request")
                 if (data.success) {
+                    router('/yourProducts')
                     toast.success(data.message)
                     setProductData({ name: "", price: "", image: "", category: "" })
                 }
@@ -40,8 +40,8 @@ const AddProduct = () => {
     }
 
     useEffect(() => {
-        if (!state?.user?.name) {
-            router('/login')
+        if (state?.user && state?.user?.name === undefined) {
+            // router('/login')
             toast.error("please login to access this page")
         }
     }, [state])
