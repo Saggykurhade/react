@@ -78,8 +78,8 @@ function App() {
         <Route exact path='/UseReducer3' element={<UseReducer3 />} />
         <Route exact path='/Customhookc' element={<CustomHookC />} />
         <Route exact path='/Customhookls' element={<CustomHookLS />} />
-        <Route exact path='/YourProduct/:id' element={<YourProducts />} />
-        <Route exact path='/UpdateProduct' element={<UpdateProduct />} />
+        <Route exact path='/your-Products' element={<YourProducts />} />
+        <Route exact path='/update-Product/:id' element={<UpdateProduct />} />
         <Route exact path='/Navbar' element={<Navbar />} />
         <Route exact path='/Cart' element={<Cart />} />
       </Routes>
