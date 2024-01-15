@@ -16,8 +16,12 @@ function Homepage() {
         router('/login');
     }
 
-    function routerToRegister() {
-        router('/Register');
+    // function routerToRegister() {
+    //     router('/Register');
+    // }
+
+    function routerToForm() {
+        router('/Form');
     }
 
 
@@ -36,7 +40,8 @@ function Homepage() {
             <h1>User : {state?.user?.name}</h1>
             {/* <button onClick={() => dispatch({ type: "INCREMENT" })}>+</button> */}
             <button onClick={routerToLogin}>Go to Login</button>
-            <button onClick={routerToRegister}>Go to Register</button>
+            {/* <button onClick={routerToRegister}>Go to Register</button> */}
+            <button onClick={routerToForm}>Go to Form</button>
             {/* <button onClick={routerToCounter}>Go to Counter</button> */}
             <button onClick={() => toast.error("Clickedd")}>Click for toast error</button>
             {/* <button onClick={() => toast.success("Clickedd")}>Click for toast success</button> */}
