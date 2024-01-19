@@ -67,7 +67,7 @@ function App() {
         <Route exact path='/class-component' element={<ClassComponent />} />
         <Route exact path='/Products' element={<Products />} />
         <Route exact path='/OneProduct/:id' element={<OneProduct />} />
-        <Route exact path='/AddProduct' element={<AddProduct />} />
+        <Route exact path='/add-product' element={<AddProduct />} />
         <Route exact path='/UseMemo' element={<UseMemo />} />
         <Route exact path='/UseCallback' element={<UseCallback />} />
         <Route exact path='/UseReducer' element={<UseReducer />} />
