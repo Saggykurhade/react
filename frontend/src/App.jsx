@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import Login from './components/Login';
-import Register from './components/Register';
+import Register2 from './components/FormFill/Register2';
 import Profile from './components/Profile';
 import Counter from './components/Counter';
 import Effect1 from './components/Effect/Effect1';
@@ -18,7 +18,6 @@ import StyledComponents from './components/Map,Ternary,Styled/StyledComponents';
 import CounterSe from './components/Map,Ternary,Styled/CounterSe';
 import DynamicStyles from './components/Dynamic/DynamicStyles';
 import ChildrenProp from './components/FormFill/ChildrenProp';
-import Form from './components/FormFill/Form';
 import { ClassComponent } from './components/Class/ClassComponent';
 import PageFound from './components/Class/PageFound';
 import Products from './components/Product/Products';
@@ -38,6 +37,7 @@ import YourProducts from './components/YourProducts';
 import UpdateProduct from './components/UpdateProduct';
 import Navbar from './components/Common/Navbar';
 import Cart from './components/Cart';
+import Register from './components/Register';
 
 
 function App() {
@@ -49,6 +49,7 @@ function App() {
         <Route path='/' element={<Homepage />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/register' element={<Register />} />
+        <Route exact path='/register2' element={<Register2 />} />
         <Route exact path='/profile' element={<Profile />} />
         <Route exact path='/counter' element={<Counter />} />
         <Route exact path='/effect1' element={<Effect1 />} />
@@ -63,7 +64,6 @@ function App() {
         <Route exact path='/counterSe' element={<CounterSe />} />
         <Route exact path='/dynamicstyles' element={<DynamicStyles />} />
         <Route exact path='/childrenprop' element={<ChildrenProp />} />
-        <Route exact path='/form' element={<Form />} />
         <Route exact path='/class-component' element={<ClassComponent />} />
         <Route exact path='/Products' element={<Products />} />
         <Route exact path='/OneProduct/:id' element={<OneProduct />} />
